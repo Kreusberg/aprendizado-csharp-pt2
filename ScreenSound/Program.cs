@@ -2,17 +2,11 @@
 
 Album albumDoQueen = new Album("A night at the opera");
 
-//Genero genero = new Genero();
-//genero.Nome = "Rock";
-
 Musica musica1 = new Musica(queen, "Love of my life")
 {
     Duracao = 213,
     Disponivel = true,
 };
-
-//musica1.Genero = new Genero();
-//musica1.Genero.Nome = "Rock";
 
 Musica musica2 = new Musica(queen, "Bohemian Rhapsody")
 {
@@ -20,8 +14,23 @@ Musica musica2 = new Musica(queen, "Bohemian Rhapsody")
     Disponivel = false,
 };
 
-//musica2.Genero = new Genero();
-//musica2.Genero.Nome = "Rock";
+Usuario usuario1 = new Usuario("Lucas", 18, new Endereco("Rua", 99, 
+    "Bairro Fictício", "São Paulo", "888888-888"), "lucas@gmail.com", "senha123");
+
+Usuario usuario2 = new Usuario("João", 19, new Endereco("Rua", 99,
+    "Bairro Fictício", "São Paulo", "888888-888"), "joao@gmail.com", "123senha");
+
+usuario1.ListarUsuario();
+usuario2.ListarUsuario();
+
+usuario1.AdicionarMusicaNaPlaylist(musica1);
+usuario1.AdicionarMusicaNaPlaylist(musica2);
+usuario2.AdicionarMusicaNaPlaylist(musica2);
+
+usuario2.Inativar();
+
+usuario1.ListarUsuario();
+usuario2.ListarUsuario();
 
 albumDoQueen.AdicionarMusica(musica1);
 albumDoQueen.AdicionarMusica(musica2);
