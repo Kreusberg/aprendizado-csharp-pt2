@@ -1,28 +1,30 @@
-﻿using System;
-using System.Reflection.Metadata.Ecma335;
+﻿Album albumDoQueen = new Album();
+albumDoQueen.Nome = "A night at the opera";
+
+//Genero genero = new Genero();
+//genero.Nome = "Rock";
 
 Musica musica1 = new Musica();
-musica1.Nome = "Roxane";
-musica1.Artista = "The Police";
-musica1.Duracao = 273;
-musica1.Disponivel = true;
-//Console.WriteLine(musica1.DescricaoResumida);
+musica1.Nome = "Love of my life";
+musica1.Duracao = 213;
+//musica1.Genero = new Genero();
+//musica1.Genero.Nome = "Rock";
 
 Musica musica2 = new Musica();
-musica2.Nome = "Vertigo";
-musica2.Artista = "U2";
-musica2.Duracao = 367;
-musica2.Disponivel = false;
-//Console.WriteLine(musica2.DescricaoResumida);
+musica2.Nome = "Bohemian Rhapsody";
+musica2.Duracao = 354;
+//musica2.Genero = new Genero();
+//musica2.Genero.Nome = "Rock";
+
+albumDoQueen.AdicionarMusica(musica1);
+albumDoQueen.AdicionarMusica(musica2);
+
+Banda queen = new Banda();
+queen.Nome = "Queen";
+queen.AdicionarAlbum(albumDoQueen);
+queen.ExibirDiscografia();
+
 /*
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
-*/
-
-List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-List<int> numerosPares = numeros.FindAll(numero => numero % 2 == 0);
-
-
 int somar(int a, int b)  => a + b;
 
 double subtrair(double a, double b) => a - b;
@@ -35,3 +37,4 @@ Console.WriteLine(somar(1, 9));
 Console.WriteLine(subtrair(19.9, 8.7));
 Console.WriteLine(multiplicar(9, 8));
 Console.WriteLine(dividir(19, 4));
+*/
