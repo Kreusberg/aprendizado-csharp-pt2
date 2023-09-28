@@ -1,4 +1,19 @@
-﻿Banda queen = new Banda("Queen");
+﻿Episodio ep1 = new (2, "Técnicas de Facilitação", 45);
+ep1.AdicionarConvidados("Maria");
+ep1.AdicionarConvidados("Marcelo");
+
+Episodio ep2 = new (1, "Técnicas de Facilitação", 67);
+ep2.AdicionarConvidados("Fernando");
+ep2.AdicionarConvidados("Marcos");
+ep2.AdicionarConvidados("Flávia");
+
+Podcast podcast = new("Podcast especial", "Daniel");
+podcast.AdicionarEpisodio(ep1);
+podcast.AdicionarEpisodio(ep2);
+podcast.ExibirDetalhes();
+
+/*
+ Banda queen = new Banda("Queen");
 
 Album albumDoQueen = new Album("A night at the opera");
 
@@ -40,7 +55,7 @@ musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
 albumDoQueen.ExibirMusicasDoAlbum();
 queen.ExibirDiscografia();
-
+*/
 /*
 int somar(int a, int b)  => a + b;
 

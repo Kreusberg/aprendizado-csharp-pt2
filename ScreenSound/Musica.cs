@@ -1,9 +1,5 @@
 ﻿class Musica
 {
-    private Banda queen;
-    private string v1;
-    private int v2;
-
     public Musica(Banda artista, string nome) 
     {
         Artista = artista;
